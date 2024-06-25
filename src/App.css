@@ -200,3 +200,9 @@
 .hover-underlined:hover {
   text-decoration: underline;
 }
+
+/*    image  */
+.img {
+  width: 3rem;
+  height: 3rem;
+}
