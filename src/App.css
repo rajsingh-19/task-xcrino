@@ -42,12 +42,6 @@
 .text-2 {
   font-size: 2rem;
 }
-
-
-
-.d-block {
-  display: block;
-}
 .sticky {
   position: sticky;
 }
@@ -75,7 +69,6 @@
 .justify-between {
   justify-content: space-between;
 } 
-
 /*    image  */
 .img {
   width: 3rem;
@@ -101,7 +94,6 @@
 .bg-white {
   background-color: #ffffff;
 }
-
 .flex-1 {
   flex: 1;
 }
