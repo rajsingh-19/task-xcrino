@@ -29,18 +29,22 @@ const Options = () => {
   // console.log(optionData);
 
   return (
-    <div>
+    <div className="flex">
+      <div className="flex-1">
       {optionData &&
         optionData.map((items, index) => (
           <div key={items.id} className="flex dir-row">
-            <div className="width-50 cursor flex dir-row items-center shadow opt-height justify-between p opt-border m-5 bg-white"  onClick={() => showRecentOrder(items.id)} style={{ borderLeft: `4px solid ${arrowColors[index]}`}}>
+            <div className="width-100 cursor flex dir-row items-center shadow opt-height justify-between p opt-border m-5 bg-white"  onClick={() => showRecentOrder(items.id)} style={{ borderLeft: `4px solid ${arrowColors[index]}`}}>
               <p className="text-1">{items.optionName}</p>
               <button className="cursor icons-bg" style={{ color: arrowColors[index] }}><IoIosArrowDown className="icons-bg" /></button>
             </div>
-              {
-                showOrder && showOrder.id === items.id && (
-                <div className="width-50 flex dir-col sticky top-0 opt-border bg-white p m-rl-5">
-                <p className="m-5">{items.title}</p>
+          </div>    
+        ))} 
+    </div>
+    <div className="fixed-right-container width-50 flex dir-col sticky top-0 opt-border bg-white p m-rl-5">
+    {showOrder && (
+                <div>
+                <p className="m-5">{showOrder.title}</p>
                 {showOrder.recentOrder.map((data) => (
                   <div key={data.id}>
                     <p className="p">{data.title}</p>
@@ -50,9 +54,9 @@ const Options = () => {
                         src={`${data.imgLink}`}
                         alt={''}
                       />
-                      <div className="text-1 p flex dir-col">
+                      <div className="text-1 p-l-5 flex dir-col">
                         <p>{data.description}</p>
-                        <span>{data.deliveringDate}</span>
+                        <span className="text-0">{data.deliveringDate}</span>
                       </div>
                     </div>
                   </div>
@@ -63,9 +67,7 @@ const Options = () => {
               </div>
                 )
               }
-          </div>
-          
-        ))}
+    </div>
     </div>
   );
 };

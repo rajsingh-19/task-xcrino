@@ -33,12 +33,18 @@
 .cursor {
   cursor: pointer;
 }
+.text-0 {
+  font-size: 0.9rem;
+}
 .text-1 {
   font-size: 1rem;
 }
 .text-2 {
   font-size: 2rem;
 }
+
+
+
 .d-block {
   display: block;
 }
@@ -82,7 +88,10 @@
 }
 /*    options  */
 .opt-height {
-  height: 3rem;
+  height: 4rem;
+}
+.options-div-height {
+  height: 60vh;
 }
 .opt-border {
   /* border: solid 1px #d9d9d9; */
@@ -93,6 +102,18 @@
   background-color: #ffffff;
 }
 
+.flex-1 {
+  flex: 1;
+}
+.fixed-right-container {
+  height: 27.5rem; 
+  overflow-y: auto; 
+  position: sticky;
+  top: 0;
+}
+.p-l-5 {
+  padding-left: 0.5rem;
+}
 /*    icons  */
 .icons-bg {
   background-color: transparent;
